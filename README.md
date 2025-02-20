@@ -82,3 +82,7 @@ The database used was SQLite because of simplicity and ease of setup.
 - Connect the client with the backend to make the request to update manager.
 - Polish the Tree UI, making it look more like a tree.
 - Implement UI feedback on successfully or failed API requests and creation of loading indicator when API request is pending.
+
+## AI Collaboration
+
+I used ChatGPT in improving the code quality of the backend API and in generating the data used in the frontend.
