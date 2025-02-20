@@ -1,0 +1,81 @@
+.tree-container-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 20px;
+}
+
+.node-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  text-align: center;
+  position: relative;
+}
+
+.toggle-btn {
+  margin-right: 5px;
+}
+
+.node-children-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Connecting lines */
+.tree-node::before,
+.tree-node::after {
+  content: "";
+  position: absolute;
+  background-color: #ccc;
+}
+
+.tree-node::before {
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+}
+
+.tree-node::after {
+  top: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.node-children-horizontal::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.node-children-horizontal .tree-node:first-child::before {
+  display: none;
+}
